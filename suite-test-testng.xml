@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name = "Parallel tests" parallel = "tests" thread-count = "2">
+
+	<!-- run all tests in ParallelTestSuite  -->
+	<test name = "Test One">
+		<!-- value for parameter in BeforeTest method  -->
+		<parameter name = "test-name" value = "Test One"/>
+		
+		<classes>
+			<class name = "use_ParallelTest.ParallelTestSuite"/>
+		</classes>
+	</test>
+	
+	
+	<!-- run all tests in ParallelTestSuite  -->
+	<test name = "Test Two">
+		<parameter name = "test-name" value = "Test Two"/>
+		
+		<classes>
+			<class name = "use_ParallelTest.ParallelTestSuite"/>
+		</classes>
+	</test>
+
+</suite>
